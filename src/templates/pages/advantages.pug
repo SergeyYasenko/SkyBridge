@@ -1,0 +1,57 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper--white
+      +header()
+
+      +b.ARTICLE.text-page
+         +b.bread-crumbs
+            +e.row
+               a(href="index.html").bread-crumbs__link Home >
+               a(href="proxy-dll.html").bread-crumbs__link SkyBridge® ProxyDLL >
+               SPAN.bread-crumbs__text Articles
+         +e.container.container
+            +b.process-block
+               +e.row
+                  +e.tabs
+                     +b.block-link
+                        a.block-link__text(href="what-story.html") What a story!
+                     +b.block-link
+                        a.block-link__text.block-link__text--active(href="#") Advantages in using freelancer programmers
+                     +b.block-link
+                        a.block-link__text(href="the-challenges.html") The challenges
+                     +b.block-link
+                        a.block-link__text(href="working-model.html") A working model
+                     +b.block-link
+                        a.block-link__text(href="missed-opportunities.html") The cost of missed opportunities
+                     +b.block-link
+                        a.block-link__text(href="conclusion.html") Conclusion
+                  +e.content
+                     +e.H1.title--mb Advantages in using freelancer programmers
+                     +e.text-block--mb
+                        +e.H2.sub-title--mb Better coding quality
+                        +b.UL.item-row--pl
+                           +e.LI.item An employer can leave a rating and review about the quality of the freelancer’s work on the freelancer platform. Bad ratings not only look bad, but also cause the freelancer’s visibility on the platforms to be reduced. Therefore, freelancers have a much stronger motive to achieve excellency than those hired as a conventional full-time employee.
+                           +e.LI.item Most freelancers agree that, if they fail to produce an acceptable quality or they have too much delay, the employer can put the plug and pay nothing.
+                     +e.text-block--mb
+                        +e.H2.sub-title--mb Shorter time to market, adapt to fluctuating work load better
+                        +b.UL.item-row--pl
+                           +e.LI.item There is a much larger pool of talents globally than the local job market.
+                           +e.LI.item he time needed to hire a freelancer is in days if not hours, while that to hire a conventional full-time employee is at least two months (including four weeks of notification period).
+                           +e.LI.item Freelancers tend to voluntarily work for longer hours so that they can finish as many jobs as possible. This means shorter time to market.
+                           +e.LI.item A software house can adjust their head count on a daily basis.
+                     +e.text-block--mb
+                        +e.H2.sub-title--mb Lower cost
+                        +b.UL.item-row--pl
+                           +e.LI.item Employers only pay the freelancers when they need them.
+                           +e.LI.item Talented programmers in developing countries charge a fraction of those in developed countries.
+                           +e.LI.item The cost to hire a freelancer is zero, while that to hire a conventional full-time employee is often many thousands of dollars.
+                     +e.text-block--mb
+                        +e.H2.sub-title--mb Happier employee
+                        +b.UL.item-row--pl
+                           +e.LI.item Freelancers with talent can make a living wherever they are
+                           +e.LI.item Freelancers have full control over their time, and they do not need to be stuck in traffic in the rush hours.
+
+      +footer()

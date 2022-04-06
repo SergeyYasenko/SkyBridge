@@ -1,0 +1,108 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper--white
+      +header()
+
+      +b.ARTICLE.sample-code
+         +b.bread-crumbs
+            +e.row
+               a(href="index.html").bread-crumbs__link Home >
+               a(href="instant-remoting.html").bread-crumbs__link SkyBridge® Instant Remoting
+               SPAN.bread-crumbs__text > Samle Code
+         .container
+            +e.text-block
+               +b.text-block
+                  +e.title Sample code of SkyBridge® instant remoting
+                  +e.text For two computers to do two-way instant communications using the SkyBridge® instant remoting, each needs three lines of code.
+            +e.code-block
+               +b.bookmark
+                  +e.top
+                     +e.label On the recipient computer:
+                  +e.content
+                     +b.code
+                        pre
+                           code.code-block(tabindex="0")
+                              |<span class="blue">using </span>System;
+                              |<span class="blue">using </span>System.Text;
+                              |<span class="blue">using </span>FrontEdge.SkyBridge;
+                              |
+                              |/// <span class="gray">&lt;summary&gt;</span>
+                              |/// <span class="green">All you need to do is to add a reference to “SkyBridgeAPI.NetFramework”. </span>
+                              |/// <span class="green">There is NOTHING else you need to do.</span>
+                              |/// <span class="gray">&lt;/summary&gt;</span>
+                              |<span class="blue">class</span> <span class="light-blue">Program</span>
+                              |{
+                              |     <span class="blue">static byte</span>[] ServiceInvoked(<span class="blue">byte</span>[] data, <span class="blue">out bool</span> compressData)
+                              |     {
+                              |         compressData = <span class="blue">false</span>;
+                              |         Console.WriteLine(Encoding.UTF8.GetString(data));
+                              |         <span class="blue">return</span> Encoding.UTF8.GetBytes(<span class="red">“What’s up?”</span>);
+                              |     }
+                              |
+                              |     <span class="blue">static void</span> Main(<span class="blue">string</span>[] args)
+                              |     {
+                              |         <span class="blue">try</span>
+                              |         {
+                              |             <span class="blue">var</span> api = SkyBridgeAPI.CreateService(serviceName: <span class="red">“abc123”</span>); <span class="green">// Create a service known as “abc123”.</span>
+                              |             api.ServiceInvoked = ServiceInvoked;
+                              |             api.Connect();
+                              |             Console.WriteLine(<span class="red">“Service \”abc123\” started successfully…”</span>);
+                              |         }
+                              |         <span class="blue">catch</span> (Exception ex)
+                              |         {
+                              |             Console.WriteLine(ex.Message);
+                              |         }
+                              |
+                              |         Console.Readkey();
+                              |     }
+                              |}
+            +e.code-block
+               +b.bookmark
+                  +e.top
+                     +e.label On the recipient computer:
+                  +e.content
+                     +b.code
+                        pre
+                           code.code-block(tabindex="0")
+                              |<span class="blue">using </span>System;
+                              |<span class="blue">using </span>System.Text;
+                              |<span class="blue">using </span>FrontEdge.SkyBridge;
+                              |
+                              |<span class="blue">class</span> <span class="light-blue">Program</span>
+                              |{
+                              |     /// <span class="gray">&lt;summary&gt;</span>
+                              |     /// <span class="green">All you need to do is to add a reference to “SkyBridgeAPI.NetFramework”. </span>
+                              |     /// <span class="green">There is NOTHING else you need to do.  It will produce the following output::</span>
+                              |     ///
+                              |     ///     <span class="green">Invocation: “Hello!”. Response: “What’s up?”. Round trip: 109 millisecs.</span>
+                              |     ///
+                              |     /// <span class="gray">&lt;/summary&gt;</span>
+                              |     /// <span class="gray">&lt;param name=</span>“args”&gt;<span>&lt;/param&gt;</span>
+                              |     <span class="blue">static void</span> Main(<span class="blue">string</span>[] args)
+                              |     {
+                              |         <span class="blue">try</span>
+                              |         {
+                              |             <span class="blue">var</span> m_api = SkyBridgeAPI.CreateClient(); // <span class="green">I intend to invoke other services.</span>
+                              |             m_api.Connect();
+                              |             <span class="blue">byte</span>[] bytesToSend = Encoding.UTF8.GetBytes(<span class="red">“Hello!”</span>);
+                              |             DateTime start = DateTime.Now;
+                              |             <span class="green">// Invoke a service known as “abc123”</span>
+                              |             <span class="blue">byte</span>[] returnedBytes = m_api.InvokeService(serviceName: <span class="red">“abc123”</span>, data: bytesToSend);
+                              |             Console.WriteLine(<span class="red">$”Invocation: \”Hello!\”. Response: \”</span>{ Encoding.UTF8.GetString(returnedBytes) }
+                              |<span class="red">\”. Round trip:</span> { (<span class="blue">int</span>)(DateTime.Now - start).TotalMilliseconds } <span class="red">millisecs.”</span> );
+                              |         }
+                              |         <span class="blue">catch</span> (Exception ex)
+                              |         {
+                              |             Console.WriteLine(ex.Message);
+                              |         }
+                              |
+                              |         Console.ReadKey();
+                              |     }
+                              |}
+
+
+
+      +footer()

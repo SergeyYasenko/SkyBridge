@@ -1,0 +1,14 @@
+/node_modules
+/.idea/$CACHE_FILE$
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/dist/assets/images/password.svg
+/.idea/inspectionProfiles/profiles_settings.xml
+/dist/assets/images/proxy-dll.png
+/.idea/Skybridge.iml
+/tasks/sources.js
+/tasks/stylesscss-dev.js
+/tasks/stylesscss-prod.js
+/.idea/vcs.xml
+/yarn.lock

@@ -1,0 +1,180 @@
+
+.footer
+   background rgba(23, 16, 39, 1) 0% 0%
+   padding-top 125px
+
+   &__row
+      display flex
+      justify-content space-between
+      align-items flex-start
+      flex-wrap wrap
+
+   &__logo
+      max-width 269px
+
+   &__nav-content
+      display flex
+      justify-content space-between
+      flex-wrap wrap
+      width 660px
+
+   &__nav-block
+      padding-left 20px
+      padding-right 20px
+      margin-left 75px
+
+      &+&
+         margin-left 0
+
+   &__list
+      margin-right 60px
+
+      &:last-child
+         margin 0
+
+   &__title
+      font-size 20px
+      line-height 25px
+      font-family Inter-ExtraBold
+      color accent
+      padding-bottom 35px
+      text-transform uppercase
+      pointer-events none
+
+   &__item
+      padding-bottom 15px
+
+   &__link
+      font-size 15px
+      line-height 25px
+      font-family Inter-Regular
+      color accent
+      &:hover
+         text-decoration underline
+         color accent
+
+   &__update-block
+      width 600px
+
+   &__update-title
+      font-size 20px
+      line-height 25px
+      font-family Inter-ExtraBold
+      text-transform uppercase
+      color accent
+      padding-bottom 35px
+      pointer-events none
+
+   &__update-text
+      font-size 15px
+      line-height 25px
+      font-family Inter-Regular
+      color accent
+      padding-bottom 20px
+      pointer-events none
+      margin-bottom 0
+
+   &__submitting-row
+      justify-content center
+      display flex
+      align-items center
+
+   &__input-text
+      width 100%
+
+      .error
+         border 1px solid red
+         background rgba(255, 167, 167, 0.479)
+
+   &__input
+      border-radius 5px 0px 0px 5px
+      width 100%
+      height 48px
+      border none
+      padding-left 15px
+      padding-right 15px
+
+   &__btn
+      border-radius 0px 5px 5px 0px
+      width 180px
+      height 48px
+      padding 12px 25px
+
+.privacy-block
+   max-width 1642px
+   margin 0 auto
+   padding-top 40px
+   padding-bottom 40px
+   text-align center
+   padding-left 15px
+   padding-right 15px
+
+   .line
+      margin-bottom 39px
+      background-color #797979
+      height 0.5px
+
+   &__text
+      max-width 100%
+      font-family Inter-Regular
+      font-size 15px
+      line-height 25px
+      color accent
+      border-top 1px colid accent
+
+@media only screen and (max-width: 1558px)
+   .footer
+      &__row
+         justify-content center
+
+@media only screen and (max-width: 1024px)
+
+   .footer
+      padding-top 60px
+
+      &__logo-block
+         width 100%
+         display flex
+         justify-content center
+
+      &__nav-block
+         padding-bottom 40px
+         margin-left 0
+
+      &__nav-content
+         margin-top 30px
+
+      &__logo
+         max-width 150px
+
+@media only screen and (max-width: sm-breakpoint)
+
+   .input
+      width 100%
+
+   .footer
+
+      &__update-block
+         width 100%
+
+@media only screen and (max-width: xs-breakpoint)
+
+   .footer
+
+      &__row
+         justify-content center
+
+      &__list
+         width 100%
+         margin-right 0
+
+      &__update-block
+         text-align center
+
+      &__btn
+         width 120px
+
+      &__nav-content
+         flex-wrap wrap
+         justify-content center
+

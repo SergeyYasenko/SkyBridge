@@ -1,0 +1,36 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper--white
+      +header()
+
+      +b.ARTICLE.price
+         +b.text-block
+            +e.H1.title PRICE
+            +e.P.text Following prices and billing thresholds <br> are subject to change without prior notice.
+         +e.container.container
+            +e.row
+               +b.card
+                  +e.title Free and Anonymous
+                  +e.month $0<span class="price__period"> / month </span>
+                  +e.P.text Can use all SkyBridge® technologies anonymously and free of charge under the following limitations:
+                  +e.list
+                     +e.item A maximum of <span class="price__strong"> 2 concurrent connections </span> per IP address.
+                     +e.item A maximum of <span class="price__strong"> 200 KB </span> of data transmitted per IP address per day.
+                     +e.item A maximum of  <span class="price__strong"> 120 minutes </span> of connection time per IP address per day.
+                     +e.item Service alias has to be unique globally. A service alias is the name by which a computer is know to other computers, which they must use to send data to this computer.
+                  a(href="#").price__btn.btn Get it free
+               +b.card--color
+                  +e.title Paid Account
+                  +e.month $14<span class="price__period"> / month </span>
+                  +e.P.text Can use all of the SkyBridge® technologies without any limitation.
+                  +e.P.text Service aliases only needs to be unique within the account. This means that two accounts can use the same alias without conflict.
+                  +e.P.text Data usage:
+                  +e.list
+                     +e.item Connection time: <span class="price__strong"> $0.02/hour </span>
+                     +e.item Data transfer:<br> <pre>     <= 1 GB/month: <span class="price__strong">Free </span></pre><pre>     > 1 GB/month: <span class="price__strong">$0.6/GB</span> </pre>
+                  a(href="#").price__btn.btn Request access
+            +e.warning *When such limits are breached, user’s code gets exceptions.
+      +footer()

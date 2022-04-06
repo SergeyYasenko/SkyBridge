@@ -1,0 +1,48 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper--white
+      +header()
+
+      +b.ARTICLE.text-page
+         +b.bread-crumbs
+            +e.row
+               a(href="index.html").bread-crumbs__link Home >
+               a(href="proxy-dll.html").bread-crumbs__link SkyBridge® ProxyDLL >
+               SPAN.bread-crumbs__text More Details
+         +e.container.container
+            +b.process-block
+               +e.row
+                  +e.tabs--mr
+                     +b.block-link
+                        a.block-link__text.block-link__text--active(href="#") The end-to-end process of generating the proxy DLLs
+                     +b.block-link
+                        a.block-link__text(href="calling.html") The end-to-end process of calling a function in proxy DLL C’ when the freelancer runs the project
+                     +b.block-link
+                        a.block-link__text(href="other-options.html") Other use cases
+                  +e.content
+                     +e.H1.title The end-to-end process of generating the proxy DLLs:
+                     +b.item-inner
+                        +b.OL.item-row
+                           +e.LI.item The software house appoints a PC of a trusted in-office programmer who participates in the project as the PC to be remotely invoked by the proxy DLLs.
+                           +e.LI.item The SkyBridge® ProxyDLL client app is downloaded onto this PC. Two minutes.
+                           +e.LI.item Generating the proxy DLLs:
+                     +b.item-row
+                        +e.sub-item (1) Using the SkyBridge® ProxyDLL client app, user selects the original DLL C and D using a file explorer-style dialog.
+                        +e.sub-item (2) The app extracts the public metadata of the original DLL (and that of its dependency DLLs if any) into a XML, displays this XML to the user, and prompts user to agree to upload it to the server or cancel.
+                        +e.sub-item (3) The user clicks the “Continue” button.
+                        +e.sub-item (4) The XML is uploaded to the server.
+                        +e.sub-item (5) The server uses the metadata to build the proxy DLL (C’ or D’), which is downloaded into the app. The server does not save the metadata XML or the generate proxy DLL
+                        +e.sub-item (6) The app prompts the user to save the proxy DLL into a location in the local hard drive of his/her choice.
+                     +e.P.text--pl Two minutes.
+                     +b.item-inner
+                        +b.OL.item-row--mb(start="4")
+                           +e.LI.item The proxy DLL C’ and D’ are emailed to the freelancer. Two minutes.
+                           +e.LI.item The freelancer also downloads the SkyBridge® ProxyDLL client onto his PC. Two minutes
+                           +e.LI.item The freelancer puts the proxy DLL C’ and D’ in the binary folder of the project, and adds reference to these two DLLs on Visual Studio. Five minutes
+                           +e.LI.item When the freelancer compiles his project, it comes successfully.
+                     +e.P.text Altogether both sides needs 13 minutes.
+
+      +footer()

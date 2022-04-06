@@ -1,0 +1,115 @@
+.header
+   width 100%
+
+   &--bg
+      background #171027 0% 0% no-repeat padding-box
+      box-shadow 0px 20px 20px #00000040
+
+   &__row
+      display flex
+      justify-content space-between
+      align-items center
+
+   &__logo
+      max-width 281px
+      height 100px
+
+   &__list
+      display flex
+      align-items center
+      margin-bottom 0
+
+   &__item
+      border-left 0.5px solid rgba(255, 255, 255, 0.3)
+
+      &:first-child
+         border-left none
+
+         .header__link
+            padding-right 50.5px
+            padding-left 25px
+
+   &__link
+      text-align center
+      font-size 15px
+      color accentColor
+      font-family Inter-Medium
+      padding 30px 25px 30px 50.5px
+      position relative
+
+      &:hover
+            opacity 0.7
+            color accentColor
+
+      &--arrow
+         color accent
+         padding 10px 19px 10px 50.5px
+         position relative
+
+         &:before
+            position absolute
+            top 50%
+            right 1px
+            transform translate(0, -50%) rotate(45deg)
+            content ""
+            width 8px
+            height 8px
+            border-style solid
+            border-color accent
+            border-width 0 2px 2px 0
+
+         &:hover
+            opacity 0.7
+            color accentColor
+
+   &__btn-link
+      background bgbtn
+      color colorbtn
+      padding 8px 18px
+      border-radius 5px
+      margin-left 25px
+      font-family Inter-Medium
+      text-transform uppercase
+
+      &:hover
+         color accent
+         opacity 0.7
+
+@media only screen and (max-width: sm-breakpoint)
+
+   .header
+
+      &__row
+         flex-direction column
+         align-items center
+         padding-bottom 20px
+
+      &__logo
+         margin-bottom 30px
+         width 200px
+         height 60px
+
+
+@media only screen and (max-width: xs-breakpoint)
+
+   .header
+
+      &__item
+
+         &:first-child
+
+            .header
+
+               &__link
+                  padding-right 15px
+
+      &__link
+         padding 10px 15px 10px 15px
+
+         &--arrow
+            color accent
+            padding 10px 19px 10px 15px
+            position relative
+
+      &__btn-link
+         margin-left 0

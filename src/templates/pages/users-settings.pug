@@ -1,0 +1,115 @@
+extends ../layouts/main
+include ../blocks/footer/footer
+
+block content
+   div.wrapper
+      +b.HEADER.header--bg
+         +e.row.container
+               +e.logo
+                  a(href="index.html")
+                     img(src="../../assets/images/logo-header.svg", alt="logo")
+               +e.NAV.block-list
+                  +e.UL.list
+                     +e.LI.item
+                        a.header__link(href='price.html') PRICE
+                     +e.LI.item
+                        a.header__link--arrow(href='login-page.html') Frank
+
+      +b.ARTICLE.users-settings
+         +e.row
+            +b.sidebar
+               +e.row
+                  +e.block--flex
+                     a(href="account-details.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/account.svg", alt="account image")
+                        +e.link Account details
+                     a(href="users-settings.html").sidebar__item.active
+                        img.sidebar__image(src="../../assets/images/users.svg", alt="users image")
+                        +e.link Users
+                     a(href="subscription.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/subscription.svg", alt="subscription image")
+                        +e.link Subscription
+                     a(href="account-settings.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/settings.svg", alt="settings image")
+                        +e.link Account settings
+                     a(href="password-security.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/password.svg", alt="password image")
+                        +e.link Password & security
+                  a(href="#").sidebar__item.sign-out
+                     img.sidebar__image(src="../../assets/images/sign-out.svg", alt="sign out image")
+                     +e.link Sign out
+
+            +b.content
+               +b.form-wrap
+                  +b.form-block--color
+                     +b.title-block--margin
+                        +e.H1.title Users settings
+                        +e.P.text User 1
+                        span.line.line--px
+                     form.form(action="#", method="POST")
+                        fieldset
+                           +b.form-content--users
+                              +b.input-block
+                                 label.input-block__info-text(for="userName") User name
+                                 input.input-block__input.input(id="userName" type="text")
+                              +b.input-block
+                                 label.input-block__info-text(for="email") Email address
+                                 input.input-block__input.input(id="email" type="email")
+                              +b.input-block
+                                 .input-block__info-text Role
+                                 .select__row
+                                    .select__arrow
+                                       select.select#list
+                                          option(value="option 1") option 1
+                                          option(value="option 2") option 2
+                                          option(value="option 3") option 3
+                                          option(value="option 4") option 4
+                              +b.input-block
+                                 .input-block__info-text Restrictions
+                                 +e.row
+                                    input.radio(id="option1" type="radio" value="Male" name="option" checked)
+                                    label.radio-text.info-text(for="option1")
+                                       span.radio-style Option 1
+                                    input.radio(id="option2" type="radio" value="Female" name="option")
+                                    label.radio-text.info-text(for="option2")
+                                       span.radio-style Option 2
+                              +b.btn-block
+                                 button.btn-block__btn.btn-block__btn--fz.btn Save
+
+                     +b.title-block--margin
+                        +e.P.text User 2
+                        span.line.line--px
+                     form.form(action="#", method="POST")
+                        fieldset
+                           +b.form-content--users
+                              +b.input-block
+                                 label.input-block__info-text(for="userName") User name
+                                 input.input-block__input.input(id="userName" type="text")
+                              +b.input-block
+                                 label.input-block__info-text(for="email") Email address
+                                 input.input-block__input.input(id="email" type="email")
+                              +b.input-block
+                                 .input-block__info-text Role
+                                 .select__row
+                                    .select__arrow
+                                       select.select#list
+                                          option(value="option 1") option 1
+                                          option(value="option 2") option 2
+                                          option(value="option 3") option 3
+                                          option(value="option 4") option 4
+                              +b.input-block
+                                 .input-block__info-text Restrictions
+                                 +e.row
+                                    input.radio(id="option3" type="radio" value="Male" name="option1" checked)
+                                    label.radio-text.info-text(for="option3")
+                                       span.radio-style Option 1
+                                    input.radio(id="option4" type="radio" value="Female" name="option1")
+                                    label.radio-text.info-text(for="option4")
+                                       span.radio-style Option 2
+                              +b.btn-block
+                                 button.btn-block__btn.btn-block__btn--fz.btn Save
+                     +b.title-block--margin
+                        +e.P.text + Add more user
+                        span.line.line--px
+
+      +footer()

@@ -1,0 +1,42 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper--white
+      +header()
+
+      +b.ARTICLE.text-page
+         +b.bread-crumbs
+            +e.row
+               a(href="index.html").bread-crumbs__link Home >
+               a(href="proxy-dll.html").bread-crumbs__link SkyBridge® ProxyDLL >
+               SPAN.bread-crumbs__text Articles
+         +e.container.container
+            +b.process-block
+               +e.row
+                  +e.tabs
+                     +b.block-link
+                        a.block-link__text.block-link__text--active(href="#") What a story!
+                     +b.block-link
+                        a.block-link__text(href="advantages.html") Advantages in using freelancer programmers
+                     +b.block-link
+                        a.block-link__text(href="the-challenges.html") The challenges
+                     +b.block-link
+                        a.block-link__text(href="working-model.html") A working model
+                     +b.block-link
+                        a.block-link__text(href="missed-opportunities.html") The cost of missed opportunities
+                     +b.block-link
+                        a.block-link__text(href="conclusion.html") Conclusion
+                  +e.content
+                     +e.text-block
+                        +e.H1.title What a story!
+                        +e.P.text--mb I was once developing a medical cloud that needs an advanced JavaScript component to display and annotate heart EEG graphs, which we don’t know how to write, so I suggested to get a freelancer to do it. I found one called Neil in UK on a freelancer platform called Upwork with very good track record. <strong>He quoted AU$4000 and four weeks. </strong> But the CEO felt UK was too far from Australia, so he found a local consultancy firm. The contract was signed at <strong>AU$13,000 </strong>to deliver the component in <strong>three months</strong>.
+                        +e.P.text--mb After the coding started, we realized that the firm subcontracted the work to a third firm. The development dragged on for six months. Their developers did not read requirements and emails and never answer the calls. I spent tens of hours in emails trying to explain why their delivery did not meet the requirements, but every next release still had problems.
+                        +e.P.text--mb Both sides got impatient over time. Eventually they said: “We no longer want the remaining half of the payment, and we stop here.”
+                        +e.P.text--mb With deadline fast approaching, the CEO asked me, “Ask that freelancer Neil if he can finished it in two weeks.”
+                        +e.P.text--mb Neil said: “Yes, $6000 in two weeks.”
+                        +e.P.text--mb At the end of the two weeks, Neil delivered. I communicated back to him for a small issue. He fixed it in the same day. After that I never contacted him again. Customers were impressed with the sexiness of that ECG graphing component.
+                        +e.P.text I have since worked with freelancers around the word, from Estonia, Ukraine, India, Pakistan, Europe and US, to develop web components, mobile apps, logos and book cover. All jobs were delivered in time, with very satisfactory results, and all the coding jobs costed a fraction of what could have been charged by local consultants.
+
+      +footer()

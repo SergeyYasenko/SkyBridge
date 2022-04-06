@@ -1,0 +1,39 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper--white
+      +header()
+
+      +b.ARTICLE.text-page
+         +b.bread-crumbs
+            +e.row
+               a(href="index.html").bread-crumbs__link Home >
+               a(href="proxy-dll.html").bread-crumbs__link SkyBridge® ProxyDLL >
+               SPAN.bread-crumbs__text Articles
+         +e.container.container
+            +b.process-block
+               +e.row
+                  +e.tabs
+                     +b.block-link
+                        a.block-link__text(href="what-story.html") What a story!
+                     +b.block-link
+                        a.block-link__text(href="advantages.html") Advantages in using freelancer programmers
+                     +b.block-link
+                        a.block-link__text(href="the-challenges.html") The challenges
+                     +b.block-link
+                        a.block-link__text(href="working-model.html") A working model
+                     +b.block-link
+                        a.block-link__text(href="missed-opportunities.html") The cost of missed opportunities
+                     +b.block-link
+                        a.block-link__text.block-link__text--active(href="#") Conclusion
+                  +e.content
+                     +e.text-block
+                        +e.H1.title Conclusion
+                        +e.P.text--mb As far as I can see, the inevitable tide is coming. This tide is only accelerated by the COVID storm, which forces the decentralization and distribution of the work force of most businesses. I have not seen any of my colleagues face-to-face for twelve months. We all work from home, over VPN, and ‘meet’ each other once a week over Microsoft Team.
+                        +e.P.text--mb Not surprisingly, my productivity increased, because I have better sleep - I do not have to get up at 6 to avoid the traffic jam. I work one hour more every day, and still have one hour more time to exercise, because I do not have to be stuck in traffic.
+                        +e.P.text--mb How much difference will it make to my employer, then, if I am in fact on a different continent?
+                        +e.P.text--mb Those who hop on their surfboard earlier will have great fun riding this tide, while those who are tardy might get their expensive business shoes wet.
+
+      +footer()

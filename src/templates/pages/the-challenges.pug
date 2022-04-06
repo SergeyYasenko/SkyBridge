@@ -1,0 +1,54 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper--white
+      +header()
+
+      +b.ARTICLE.text-page
+         +b.bread-crumbs
+            +e.row
+               a(href="index.html").bread-crumbs__link Home >
+               a(href="proxy-dll.html").bread-crumbs__link SkyBridge® ProxyDLL >
+               SPAN.bread-crumbs__text Articles
+         +e.container.container
+            +b.process-block
+               +e.row
+                  +e.tabs
+                     +b.block-link
+                        a.block-link__text(href="what-story.html") What a story!
+                     +b.block-link
+                        a.block-link__text(href="advantages.html") Advantages in using freelancer programmers
+                     +b.block-link
+                        a.block-link__text.block-link__text--active(href="#") The challenges
+                     +b.block-link
+                        a.block-link__text(href="working-model.html") A working model
+                     +b.block-link
+                        a.block-link__text(href="missed-opportunities.html") The cost of missed opportunities
+                     +b.block-link
+                        a.block-link__text(href="conclusion.html") Conclusion
+                  +e.content
+                     +e.H1.title The challenges
+                     +e.text-block--pb
+                        +e.P.text There are some challenges and concerns which prevent software managers from harnessing the benefit of freelancers:
+                     +e.text-block--pb
+                        +e.H2.sub-title--mb Trust and communications issues
+                        +b.UL.item-row--pl
+                           +e.LI.item--mb The freelancers may be thousands of miles away on a different continent whom you have never met. This makes conventional-minded managers unease.
+                           +e.LI.item--mb A large software LIroject is usually made up of many components. For the project to compile on the freelancer’s PC, he has to have all the components. Giving all of your intellectual properties to someone in a different jurisdiction whom you have no way to prosecute if he violates the NDA is a great and often unbearable risk.
+                           +e.LI.item--mb Communications is LIne of the critical factors that decides the success or failure of a large project. It worries managers if the developers cannot go into a meeting room and sort out issues on a whiteboard.
+                     +e.text-block--mb
+                        +e.H2.sub-title--mb Ethics
+                        +e.P.text There are some challenges and concerns which prevent software managers from harnessing the benefit of freelancers:
+                        +b.UL.item-row--pl
+                           +e.LI.item--mb Is it right to give the job to people in another country, instead of your local community?
+                           +e.LI.item--mb Is it ethical to pay a quarter of what you should have paid to local consultants to the developers in a poorer country?
+                        +e.P.text--mb I don’t think readers need my two cents over such big questions. However, if you ask the freelancers I hired in Estonia, Ukraine, India and Pakistan, they would tell you that they greatly appreciated the money I paid them, which they would have had no way to earn without working as freelancers on platforms like Upwork.
+                        +e.P.text--mb At the end of the day, you have the freedom to pay them more than they asked for. I often paid 25% to 50% more as bonus at the end, because I was so happy with their work.
+                        +e.P.text--mb I do not envisage a software house with a single software development manager and 20 remote freelancer programmers. Instead, there should be a core team of local developers, working with a much larger team of remote freelancers.
+                        +e.P.text--mb This way, using freelancers does not necessarily mean that, instead of hiring 20 local developers, you hire 3 local ones and give the 17 jobs to freelancers in other countries. Instead, it enables you to undertake a much larger project that requires 100 developers with only 20 local developers whom you are able to find on the limited local job market.
+                     +e.H2.sub-title--mb Regulations
+                     +e.P.text Lots of businesses, especially medium to large organizations in developed countries such as Australia have strict HR regulations that may prevent them from hiring remote freelancers. However, when there is a need, a great opportunity to benefit everyone, the regulations need to be and will be changed to adapt to the new trend.
+
+      +footer()

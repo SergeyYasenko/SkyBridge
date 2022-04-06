@@ -1,0 +1,151 @@
+
+.account-settings
+
+   .line
+      background-color #D1D1D1
+      margin-bottom 45px
+
+   &__row
+      display flex
+      background-color accent
+      padding-bottom 0
+      position relative
+
+   .content
+
+      &__block-row
+         max-width 805px
+         width 100%
+
+      &__row
+         display flex
+         justify-content space-between
+         margin-bottom 55px
+
+         &:last-child
+            margin-bottom 0
+
+      &__block
+         padding 90px 15px
+         margin 0 120px
+
+      &__title
+         font-family Inter-ExtraBold
+         font-size 30px
+         line-height 75px
+         color dark-purple
+         margin-bottom 30px
+
+      &__sub-title
+         font-family Inter-SemiBold
+         font-size 25px
+         line-height 35px
+         color dark-purple
+         margin-bottom 25px
+
+      &__text
+         font-family Inter-Regular
+         font-size 20px
+         line-height 35px
+         color dark-purple
+         margin-bottom 0
+
+      &__btn-block
+         width 180px
+         display flex
+         flex-direction column
+         align-items end
+         margin-left 20px
+
+      &__btn
+         height 58px
+         background #2B0972
+         font-size 20px
+         width 100%
+         margin-left 20px
+
+@media only screen and (max-width: lg-breakpoint)
+
+   .account-settings
+
+      .content
+
+         &__block
+            margin 0 auto
+
+@media only screen and (max-width: md-breakpoint)
+
+   .account-settings
+
+      .line
+         margin-bottom 15px
+
+      .content
+
+         &__row
+            flex-direction column
+            margin-bottom 25px
+
+            &--switch
+               flex-direction column-reverse
+               
+               .content__text
+                  margin-bottom 0
+               
+               .content__btn-block
+                  margin-bottom 15px
+
+         &__btn-block
+            align-items start
+            margin-left 0px
+
+         &__title
+            margin-bottom 15px
+
+         &__sub-title
+            margin-bottom 15px
+
+         &__text
+            margin-bottom 15px
+
+         &__btn
+            margin-left 0px
+
+@media only screen and (max-width: sm-breakpoint)
+
+   .account-settings
+
+      &__row
+         flex-direction column
+         justify-content center
+
+      .content
+
+         &__block
+            padding 60px 15px
+
+         &__row
+            flex-direction row
+
+         &__btn-block
+            align-items end
+            margin-left 20px
+
+@media only screen and (max-width: xs-breakpoint)
+
+   .account-settings
+
+      .content
+
+            &__row
+               flex-direction column
+
+               &--switch
+                  flex-direction column-reverse
+                  
+                  .content__text
+                     margin-bottom 0
+
+            &__btn-block
+               align-items start
+               margin-left 0px

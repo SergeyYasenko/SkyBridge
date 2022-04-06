@@ -1,0 +1,305 @@
+
+.account-details
+
+   &__row
+      display flex
+      background-color accent
+      position relative
+
+      .form-content
+         margin-bottom 30px
+
+.sidebar
+   background url('../../assets/images/sidebar.png')
+   background-size cover
+   background-repeat no-repeat
+   width 630px
+   min-width 400px
+   padding-top 95px
+   padding-left 140px
+   display flex
+   flex-direction column
+   min-height 100vh
+   height 100vh
+   position sticky
+   top 0
+   left 0
+
+   &__row
+      height calc(100vh - 200px)
+      display flex
+      flex-direction column
+
+   &__block
+      display flex
+      flex-direction column
+      width 100%
+      height 100%
+
+      &--flex
+         flex-grow 1
+         flex-shrink 1
+         flex-basis auto
+
+   &__item
+      display flex
+      padding-top 12px
+      padding-bottom 12px
+      align-items center
+      opacity 0.5
+      position relative
+
+      &:hover
+         opacity 1
+
+      &.active
+         opacity 1
+
+         &:before
+            content ''
+            width 15px
+            height 70px
+            display inline-block
+            position absolute
+            right 0
+            top 50%
+            transform translate(0, -50%)
+            background bgbtn
+
+      &:last-child
+         margin-bottom 0
+
+   &__link
+      color accent
+      font-family Inter-Bold
+      font-size 20px
+      line-height 34px
+      padding-left 30px
+
+.sign-out
+   width 100%
+
+.form-wrap
+   margin 0 auto 0 120px
+   padding-left 15px
+   padding-right 15px
+
+.form-block
+   padding-top 90px
+   max-width 810px
+
+   &--color
+      margin-bottom 195px
+
+      .title-block
+         margin-bottom 0
+
+         &__title
+            color dark-purple
+            font-family Inter-ExtraBold
+            font-size 30px
+            padding-bottom 30px
+            margin-bottom 0
+
+
+         &__text
+            font-family Inter-SemiBold
+            color black
+            font-size 25px
+            padding-bottom 25px
+            margin-bottom 0
+
+         .line
+            background-color #D1D1D1
+            height 1px
+
+      .input-block
+
+         &__info-text
+            color #40139d
+
+      .input-block
+
+         &__row
+            margin-top 5px
+            margin-left 5px
+
+         &__input
+            background-color #EDEDED
+            border 1px solid #D1D1D1
+
+      .radio-style
+         color black
+
+         &:before
+            outline 3px solid dark-purple
+            background-color white
+
+      .radio
+
+         &:checked
+
+            + .radio-text
+
+               &:after
+                  background-color dark-purple
+
+      .select
+
+         &__toggle
+            background-color #D1D1D1
+
+         &__content
+            background-color #D1D1D1
+
+      .btn-block
+         justify-content end
+         width 100%
+
+         &__btn
+            background #2b0972
+
+   .email-block
+
+      .title-block
+            margin-bottom 0
+
+            &__title
+               color dark-purple
+               font-family Inter-ExtraBold
+               font-size 24px
+               padding-bottom 10px
+               margin-bottom 0
+
+      .form-content
+         margin-bottom 0
+
+      .input-block
+         margin-bottom 100px
+
+@media only screen and (max-width: 1557px)
+
+   .form-block
+
+      &--color
+
+         .input-block
+            flex-basis 600px
+
+      .email-block
+
+         .input-block
+            margin-bottom 45px
+
+@media only screen and (max-width: lg-breakpoint)
+
+   .sidebar
+      padding-left 60px
+      width 400px
+
+   .form-wrap
+      margin 0 auto
+
+
+@media only screen and (max-width: sm-breakpoint)
+
+   .account-details
+
+      &__row
+         flex-direction column
+         justify-content center
+
+   .sidebar
+      width 100%
+      min-width 100%
+      padding 60px 30px 60px
+      display flex
+      height 100%
+      min-height 100%
+      position static
+
+      &__row
+         height 100%
+
+      &__block
+         display flex
+         flex-direction row
+         flex-wrap wrap
+         min-height auto
+         margin-right 0
+         height auto
+
+         &--flex
+            flex-grow 0
+            flex-shrink 1
+            flex-basis auto
+
+      &__item
+         flex-basis 50%
+         flex-wrap nowrap
+         padding 7px 15px
+
+         &.active
+
+            &:before
+               display none
+
+      &__link
+         font-size 17px
+
+      &__image
+         width 25px
+         height 25px
+
+   .form-block
+      padding-top 60px
+
+      &--color
+         margin-bottom 60px
+
+         .title-block
+            margin-bottom 0
+
+            &__title
+               padding-bottom 15px
+
+
+            &__text
+               padding-bottom 15px
+               margin-bottom 0
+
+      .email-block
+
+         .input-block
+            margin-bottom 15px
+
+   .sign-out
+      width 100%
+      padding-top 50px
+      padding-bottom 0
+      justify-content end
+
+@media only screen and (max-width: 644px)
+
+   .sidebar
+
+      &__item
+         display flex
+         flex-grow 1
+         flex-shrink 1
+         flex-basis 100%
+         flex-wrap nowrap
+         padding-left 15px
+         padding-right 15px
+
+@media only screen and (max-width: xs-breakpoint)
+
+   .account-details
+
+      &__row
+         padding-bottom 0
+
+   .sidebar
+
+      &__block
+         margin-left 0

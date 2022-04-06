@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="imagetoolbar" content="no">
+    <meta name="msthemecompatible" content="no">
+    <meta name="cleartype" content="on">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="google" value="notranslate">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Skybridge</title>
+    <link href="assets/styles/main.css?t=1648024058780" rel="stylesheet">
+  </head>
+  <body>
+    <div class="svg-sprite"></div>
+    <div class="main-content">
+      <div class="wrapper--white">
+        <header class="header">
+          <div class="header__row container">
+            <div class="header__logo"><a href="index.html"><img src="../../assets/images/logo-header.svg" alt="logo"/></a>
+            </div>
+            <nav class="header__block-list">
+              <ul class="header__list">
+                <li class="header__item"><a class="header__link" href="price.html">PRICE</a>
+                </li>
+                <li class="header__item"><a class="header__link" href="login-page.html">LOG IN</a>
+                </li><a class="header__btn-link" href="sign-up.html">SIGN UP</a>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <article class="text-page">
+          <div class="bread-crumbs">
+            <div class="bread-crumbs__row"><a class="bread-crumbs__link" href="index.html">Home ></a><a class="bread-crumbs__link" href="proxy-dll.html">SkyBridge® ProxyDLL ></a>
+              <SPAN class="bread-crumbs__text">More Details</SPAN>
+            </div>
+          </div>
+          <div class="text-page__container container">
+            <div class="process-block">
+              <div class="process-block__row">
+                <div class="process-block__tabs process-block__tabs--mr">
+                  <div class="block-link"><a class="block-link__text" href="process.html">The end-to-end process of generating the proxy DLLs</a>
+                  </div>
+                  <div class="block-link"><a class="block-link__text block-link__text--active" href="#">The end-to-end process of calling a function in proxy DLL C’ when the freelancer runs the project</a>
+                  </div>
+                  <div class="block-link"><a class="block-link__text" href="other-options.html">Other use cases</a>
+                  </div>
+                </div>
+                <div class="process-block__content process-block__content--width">
+                  <h1 class="process-block__title">When the freelancer runs the project, a function in proxy DLL C’ is called. Following is the end-to-end process:
+                  </h1>
+                  <ol class="item-row">
+                    <li class="item-row__item">Function “GetEmployeeBirthday” in proxy DLL C’ is called with input parameter “EmployeeId” being “12345”.
+                    </li>
+                  </ol>
+                  <div class="item-row item-row--code">
+                    <div class="item-row__item">2. This function assembles the following XML string: <pre class="font-family">   &lt;FunctionName&gt;GetEmployeeBirthday&lt;/FunctionName&gt;</pre> <pre class="font-family">   &lt;InputParams&gt;</pre> <pre class="font-family">     &lt;Param Name=”EmployeeId” Type=”int”&gt;12345&lt;/Param&gt; </pre>&lt;/InputParams&gt;
+                    </div>
+                  </div>
+                  <ol class="item-row item-row--mb" start="3">
+                    <li class="item-row__item">This function passes the XML on to the SkyBridge ProxyDLL client.
+                    </li>
+                    <li class="item-row__item">The client checks if the end user has turned on caching for this function. If yes, and there is a cached value that has not expired, return the cached value to the function, and the function returns the value to the caller. This is the end of the function call.
+                    </li>
+                    <li class="item-row__item">If there is no cached value, the client sends this XML via the SkyBridge® instant remoting to the client in the PC in the software house that contains the original DLLs.
+                    </li>
+                    <li class="item-row__item">The client calls function “GetEmployeeBirthday” in the original DLL C with input parameter “EmployeeId” being “12345”
+                    </li>
+                    <li class="item-row__item">That function returns “23/07/1987” as the birthday to the client.
+                    </li>
+                    <li class="item-row__item">The client returns “23/07/1987” via the SkyBridge® instant remoting to the client in the freelancer’s PC.
+                    </li>
+                    <li class="item-row__item">The client in the freelancer’s PC returns “23/07/1987” to the function in proxy DLL C.
+                    </li>
+                    <li class="item-row__item item-row__item--ml">The function returns “23/07/1987” to the caller.
+                    </li>
+                  </ol>
+                  <p class="process-block__text">The whole process takes less than half a second, and end user does not need to know anything about it. All they know is that function “GetEmployeeBirthday” in the proxy DLL C’ was called with input parameter “EmployeeId” being “12345”, and it returned “23/07/1987” in 121 milliseconds.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <footer class="footer">
+          <div class="footer__row container">
+            <div class="footer__logo-block"><a href="#"><img class="footer__logo" src="../../assets/images/logo-footer.png" alt="footer-logo"/></a>
+            </div>
+            <div class="footer__nav-content">
+              <div class="footer__nav-block">
+                <div class="footer__title">ABOUT US
+                </div>
+                <nav class="footer__list">
+                  <ul>
+                    <li class="footer__item"><a class="footer__link" href="#">Home</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Get In Touch</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">FAQs</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Careers</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer__nav-block">
+                <div class="footer__title">PRODUCT
+                </div>
+                <nav class="footer__list">
+                  <ul>
+                    <li class="footer__item"><a class="footer__link" href="#">Testimonials</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">How It Works</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Instant Remoting</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">ProxyDLL</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer__nav-block">
+                <div class="footer__title">RESOURCES
+                </div>
+                <nav class="footer__list">
+                  <ul>
+                    <li class="footer__item"><a class="footer__link" href="#">Using Skybridge</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Docs</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Support</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="footer__update-block">
+              <div class="footer__update-title">WANT TO STAY UPDATED?
+              </div>
+              <p class="footer__update-text">Subscribe to our newsletter. No spams. Just awesome infos!
+              </p>
+              <div class="footer__submitting-row">
+                <div class="footer__input-text">
+                  <input class="footer__input input" type="text"/>
+                </div>
+                <div class="footer__btn-link"><a class="footer__btn btn" href="#">Subscribe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="privacy-block"><span class="line line--px"></span>
+            <div class="privacy-block__text">Privacy Policy | Terms & Conditions
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="assets/scripts/build.js"></script>
+  </body>
+</html>

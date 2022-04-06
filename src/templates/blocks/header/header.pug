@@ -1,0 +1,13 @@
+mixin header()
+   +b.HEADER.header
+      +e.row.container
+            +e.logo
+               a(href="index.html")
+                  img(src="../../assets/images/logo-header.svg", alt="logo")
+            +e.NAV.block-list
+               +e.UL.list
+                  +e.LI.item
+                     a.header__link(href='price.html') PRICE
+                  +e.LI.item
+                     a.header__link(href='login-page.html') LOG IN
+                  a.header__btn-link(href='sign-up.html') SIGN UP

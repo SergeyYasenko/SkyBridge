@@ -1,0 +1,52 @@
+mixin footer()
+   +b.FOOTER.footer
+      +e.row.container
+         +e.logo-block
+            a(href="#")
+               img.footer__logo(src="../../assets/images/logo-footer.png", alt="footer-logo")
+         +e.nav-content
+            +e.nav-block
+               +e.title ABOUT US
+               +e.NAV.list
+                  +e.UL
+                     +e.LI.item
+                        a.footer__link(href="#") Home
+                     +e.LI.item
+                        a.footer__link(href="#") Get In Touch
+                     +e.LI.item
+                        a.footer__link(href="#") FAQs
+                     +e.LI.item
+                        a.footer__link(href="#") Careers
+            +e.nav-block
+               +e.title PRODUCT
+               +e.NAV.list
+                  +e.UL
+                     +e.LI.item
+                        a.footer__link(href="#") Testimonials
+                     +e.LI.item
+                        a.footer__link(href="#") How It Works
+                     +e.LI.item
+                        a.footer__link(href="#") Instant Remoting
+                     +e.LI.item
+                        a.footer__link(href="#") ProxyDLL
+            +e.nav-block
+               +e.title RESOURCES
+               +e.NAV.list
+                  +e.UL
+                     +e.LI.item
+                        a.footer__link(href="#") Using Skybridge
+                     +e.LI.item
+                        a.footer__link(href="#") Docs
+                     +e.LI.item
+                        a.footer__link(href="#") Support
+         +e.update-block
+            +e.update-title WANT TO STAY UPDATED?
+            +e.P.update-text Subscribe to our newsletter. No spams. Just awesome infos!
+            +e.submitting-row
+               +e.input-text
+                  input.footer__input.input(type="text")
+               +e.btn-link
+                  a.footer__btn.btn(href="#") Subscribe
+      +b.privacy-block
+         span.line.line--px
+         +e.text Privacy Policy | Terms & Conditions

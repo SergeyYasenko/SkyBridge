@@ -1,0 +1,225 @@
+
+.item-row
+   padding-left 0
+   margin-bottom 0
+
+   &--pl
+      list-style disc
+      padding-left 20px
+
+   &--mb
+      margin-bottom 35px
+
+   &--code
+
+      .item-row__item
+         margin-left 0
+
+   &__item
+      font-family Inter-Regular
+      font-size 20px
+      line-height 35px
+      color #000
+      margin-left 25px
+
+      &--mb
+         margin-bottom 50px
+
+      &--ml
+         margin-left 40px
+
+   &__sub-item
+      font-family Inter-Regular
+      font-size 20px
+      line-height 35px
+      color #000
+      margin-bottom 0
+      margin-left 30px
+
+.block-link
+   margin-bottom 20px
+
+   &__text
+      font-family Inter-Bold
+      font-size 20px
+      line-height 35px
+      color #919191
+
+      &--active
+         color #6823F9
+
+      &:hover
+         color #6823F9
+
+.process-block
+   margin-top 145px
+   margin-bottom 195px
+
+   &__tabs
+      display flex
+      flex-direction column
+      max-width 525px
+      min-width 400px
+      padding-top 5px
+      margin-right 170px
+
+      &--mr
+         margin-right 85px
+
+
+   &__row
+      display flex
+
+   &__content
+      padding-left 15px
+      padding-right 15px
+      max-width 840px
+
+      &--width
+         max-width 990px
+
+   &__text-block
+      margin-bottom 100px
+
+      &--mmb
+         margin-bottom 40px
+
+      &--mb
+         margin-bottom 50px
+
+      &--pb
+         margin-bottom 90px
+
+      &:last-child
+         margin-bottom 0
+
+   &__title
+      font-family Inter-ExtraBold
+      font-size 50px
+      line-height 75px
+      color #40139D
+      margin-bottom 85px
+
+      &--mb
+         margin-bottom 65px
+
+   &__sub-title
+      font-family Inter-Bold
+      font-size 30px
+      line-height 50px
+      color #2B0972
+      margin-bottom 50px
+
+      &--pb
+         margin-bottom 40px
+
+   &__text
+      font-family Inter-Regular
+      font-size 20px
+      line-height 35px
+      color #000
+
+      &:last-child
+         margin-bottom 0
+
+      &--mb
+         margin-bottom 40px
+
+      &--pl
+         padding-left 25px
+
+@media only screen and (max-width: lg-breakpoint)
+
+   .block-link
+
+      &__text
+         margin-right 20px
+
+   .process-block
+
+      &__row
+         flex-direction column
+
+      &__tabs
+         flex-direction row
+         flex-wrap wrap
+         max-width 100%
+         min-width 100%
+         margin-right 0px
+
+      &__content
+         max-width 100%
+
+
+
+@media only screen and (max-width: md-breakpoint)
+
+   .block-link
+      margin-bottom 20px
+
+      &__text
+         font-size 18px
+         line-height 24px
+
+   .process-block
+      margin-top: 60px;
+      margin-bottom: 60px;
+
+      &__title
+         margin-bottom 40px
+
+      &__sub-title
+         margin-bottom 20px
+         font-size 26px
+
+      &__text-block
+         margin-bottom 40px
+
+      &__item
+         margin-bottom 60px
+
+@media only screen and (max-width: xs-breakpoint)
+
+   .block-link
+      margin-bottom 0
+      padding-top 10px
+      padding-bottom 10px
+
+      &__text
+         font-size 16px
+         line-height 24px
+
+   .process-block
+
+      &__content
+         padding-left 0
+         padding-right 0
+
+      &__tabs
+         flex-direction column
+         margin-bottom 20px
+
+      &__title
+         font-size 30px
+         line-height 50px
+         margin-bottom 20px
+
+         &--mb
+            margin-bottom 60px
+
+      &__sub-title
+         font-size 24px
+
+      &__text
+         font-size 14px
+         line-height 35px
+
+   .item-row
+
+      &__item
+         font-size 14px
+         line-height 35px
+
+      &__sub-item
+         font-size 14px
+         line-height 35px

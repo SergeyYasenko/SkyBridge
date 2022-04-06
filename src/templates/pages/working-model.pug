@@ -1,0 +1,46 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper--white
+      +header()
+
+      +b.ARTICLE.text-page
+         +b.bread-crumbs
+            +e.row
+               a(href="index.html").bread-crumbs__link Home >
+               a(href="proxy-dll.html").bread-crumbs__link SkyBridge® ProxyDLL >
+               SPAN.bread-crumbs__text Articles
+         +e.container.container
+            +b.process-block
+               +e.row
+                  +e.tabs
+                     +b.block-link
+                        a.block-link__text(href="what-story.html") What a story!
+                     +b.block-link
+                        a.block-link__text(href="advantages.html") Advantages in using freelancer programmers
+                     +b.block-link
+                        a.block-link__text(href="the-challenges.html") The challenges
+                     +b.block-link
+                        a.block-link__text.block-link__text--active(href="#") A working model
+                     +b.block-link
+                        a.block-link__text(href="missed-opportunities.html") The cost of missed opportunities
+                     +b.block-link
+                        a.block-link__text(href="conclusion.html") Conclusion
+                  +e.content
+                     +e.H1.title A working model
+                     +e.P.text--mb A software development project can be conducted by a local team which consists of architects, programmers and testers.
+                     +b.item-inner
+                        +b.OL.item-row
+                           +e.LI.item The local team creates detailed software requirement specification, the software architecture and software design documents.
+                           +e.LI.item They then decide what components can be carved out and outsourced to remote freelancers.
+                           +e.LI.item Local programmers start coding.
+                           +e.LI.item For each outsourced component, the local team creates the detailed water-tight requirement spec, like the one I gave to Neil, and decide the skill sets and the levels of skill sets needed.
+                           +e.LI.item The team lead finds freelancers on platforms such as Upwork.
+                           +e.LI.item They create online source control projects on platforms such as GitHub. If the risk of intellectual property loss is low, the local team and all freelancers may share the GitHub repository. If this risk is high, each freelancer gets a separate account which contains only the component that he/she is asked to code. This reduces the risk of intellectual property theft.
+                           +e.LI.item The requirement specs of the outsourced components are given to the freelancers, agreed payments are paid into the escrow accounts, and they start coding.
+                           +e.LI.item The local team creates automated software testing code and manual testing procedures that can be used to verify and validate components both coded internally and outsourced.
+                           +e.LI.item When a freelancer finish his/her work, it is verified and validated. When accepted, the fund in the escrow is released.
+
+      +footer()

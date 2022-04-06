@@ -1,0 +1,35 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper--white
+      +header()
+
+      +b.ARTICLE.instant-remoting
+         +b.bread-crumbs
+            +e.row
+               a(href="index.html").bread-crumbs__link Home >
+               SPAN.bread-crumbs__text SkyBridge® Instant Remoting
+         +b.container--mr
+            +b.remoting-block
+               +e.row
+                  +e.content
+                     +e.H1.title SkyBridge® Instant Remoting
+                     +e.P.text Two computers are a world apart, separated by the Internet and firewalls. Using SkyBridge® instant remoting, in<a class="remoting-block__link" href="#"> three lines of code ,</a> computer A can send an arbitrary byte array to B, B can send a response byte array back, the round trip happens within half a second. No learning curve is needed.
+                     +e.P.text Since any complex data can be serialized into a byte array, two computers can use this API to implement any complex communication. The sky is the limit.
+                  +e.img-block
+                     img.remoting-img(src="../../assets/images/instant-remoting.png", alt="remoting image")
+
+         +b.proxy-dll
+            .container.container--ml
+               +e.row
+                  +e.img-block
+                     img.diagram-img(src="../../assets/images/diagram.png", alt="Instant Remoting Diagram image")
+                  +e.content--pl
+                     +e.H2.title Behind the scenes, it is the SkyBridge® server which relays the data between the two computers
+                     +e.P.text Every connection between a computer and the SkyBridge® server is uniquely encrypted using TLS. The server does not understand, store or log the data being relayed. The server has multiple instances in a auto-scaling group behind a load balancer in Amazon Web Services. If an instance crashes or all are stressed, more instances will be automatically launched to share the load.
+                     a(href="sample-code.html").proxy-dll__btn.btn Sample code of SkyBridge® Instant Remoting
+
+
+      +footer()

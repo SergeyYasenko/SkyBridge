@@ -1,0 +1,81 @@
+extends ../layouts/main
+include ../blocks/footer/footer
+
+block content
+   div.wrapper
+      +b.HEADER.header--bg
+         +e.row.container
+               +e.logo
+                  a(href="index.html")
+                     img(src="../../assets/images/logo-header.svg", alt="logo")
+               +e.NAV.block-list
+                  +e.UL.list
+                     +e.LI.item
+                        a.header__link(href='price.html') PRICE
+                     +e.LI.item
+                        a.header__link--arrow(href='login-page.html') Frank
+
+      +b.ARTICLE.account-settings
+         +e.row
+            +b.sidebar
+               +e.row
+                  +e.block--flex
+                     a(href="account-details.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/account.svg", alt="account image")
+                        +e.link Account details
+                     a(href="users-settings.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/users.svg", alt="users image")
+                        +e.link Users
+                     a(href="subscription.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/subscription.svg", alt="subscription image")
+                        +e.link Subscription
+                     a(href="#").sidebar__item.active
+                        img.sidebar__image(src="../../assets/images/settings.svg", alt="settings image")
+                        +e.link Account settings
+                     a(href="password-security.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/password.svg", alt="password image")
+                        +e.link Password & security
+                  a(href="#").sidebar__item.sign-out
+                     img.sidebar__image(src="../../assets/images/sign-out.svg", alt="sign out image")
+                     +e.link Sign out
+
+            +b.content
+               +e.block
+                  +e.block-row
+                     +e.H1.title Account settings
+                     +e.H2.sub-title Field 1
+                     span.line.line--px
+                     +e.row--switch
+                        +e.P.text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+                        +e.btn-block
+                           label.switch 
+                              input(type="checkbox" name="switch")
+                              span.slider.round
+                     +e.H2.sub-title Field 2
+                     span.line.line--px
+                     +e.row
+                        +e.P.text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+                        +e.btn-block
+                           a(href="#").content__btn.btn Edit
+                     +e.H2.sub-title Field 3
+                     span.line.line--px
+                     +e.row
+                        +e.P.text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+                        +e.btn-block
+                           a(href="#").content__btn.btn Edit
+                     +e.H2.sub-title Field 4
+                     span.line.line--px
+                     +e.row
+                        +e.P.text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+                        +e.btn-block
+                           a(href="#").content__btn.btn Edit
+                     +e.H2.sub-title Field 5
+                     span.line.line--px
+                     +e.row
+                        +e.P.text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+                        +e.btn-block
+                           a(href="#").content__btn.btn Edit
+
+
+
+      +footer()

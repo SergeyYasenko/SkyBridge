@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="imagetoolbar" content="no">
+    <meta name="msthemecompatible" content="no">
+    <meta name="cleartype" content="on">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="google" value="notranslate">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Skybridge</title>
+    <link href="assets/styles/main.css?t=1648024058780" rel="stylesheet">
+  </head>
+  <body>
+    <div class="svg-sprite"></div>
+    <div class="main-content">
+      <div class="wrapper--white">
+        <header class="header">
+          <div class="header__row container">
+            <div class="header__logo"><a href="index.html"><img src="../../assets/images/logo-header.svg" alt="logo"/></a>
+            </div>
+            <nav class="header__block-list">
+              <ul class="header__list">
+                <li class="header__item"><a class="header__link" href="price.html">PRICE</a>
+                </li>
+                <li class="header__item"><a class="header__link" href="login-page.html">LOG IN</a>
+                </li><a class="header__btn-link" href="sign-up.html">SIGN UP</a>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <article class="instant-remoting">
+          <div class="bread-crumbs">
+            <div class="bread-crumbs__row"><a class="bread-crumbs__link" href="index.html">Home ></a>
+              <SPAN class="bread-crumbs__text">SkyBridge® ProxyDLL</SPAN>
+            </div>
+          </div>
+          <div class="container container--mr">
+            <div class="remoting-block">
+              <div class="remoting-block__row">
+                <div class="remoting-block__content">
+                  <h1 class="remoting-block__title">SkyBridge® ProxyDLL
+                  </h1>
+                  <p class="remoting-block__text">The COVID pandemic brought many deep changes in our society, one of them is to work from home. The use of freelancer programmers over platforms such as Upwork can give software teams <a class="remoting-block__link" href="#"> huge advantages</a>.
+                  </p>
+                  <p class="remoting-block__text">However, one concern prevents many software teams from hiring freelancers, especially international: the safe-keeping of their intellectual property.
+                  </p>
+                  <p class="remoting-block__text">A software application often contains multiple components, some of which may contain valuable IP. Even if the freelancers only work on those that contains little IP, all the components need to be on their PCs for the project to compile and run.
+                  </p>
+                  <p class="remoting-block__text">Using the SkyBridge® ProxyDLL technology, in a few mouse clicks, the software team generates a proxy DLL from the original DLL that contains valuable IP, and gives the proxy DLL to the freelancers. The proxy DLL has the same public interface as the original DLL, therefore the freelancers’ project will compile and run.
+                  </p>
+                  <p class="remoting-block__text">Internally, the proxy DLL forwards every call on its functions to the eponymous functions in the original DLL, using the SkyBridge® instant remoting technology. The data return by the function in the original DLL is returned to the function in the proxy DLL, then to the caller. This way, in the eyes of its callers, the proxy DLL has the same behaviour as the original DLL.
+                  </p>
+                </div>
+                <div class="remoting-block__img-block"><img class="remoting-img" src="../../assets/images/proxy.png" alt="remoting image">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proxy-dll">
+            <div class="container container--ml">
+              <div class="proxy-dll__row proxy-dll__row--pb">
+                <div class="proxy-dll__content">
+                  <h2 class="proxy-dll__title proxy-dll__title--fz">More Details
+                  </h2>
+                  <p class="proxy-dll__text">The diagram shows how SkyBridge® ProxyDLL is used in a project with four components. <a class="remoting-block__link" href="#">DLL C</a> and D <a class="remoting-block__link" href="#">contains</a> valuable IP and cannot be given to the freelancer, <a class="remoting-block__link" href="#">so</a> proxy DLL C’ and D’ are generated and given to the freelancer.
+                  </p>
+                </div>
+                <div class="proxy-dll__content proxy-dll__content--width"><a class="proxy-dll__btn btn" href="process.html">Generating the proxy DLLs</a><a class="proxy-dll__btn btn" href="calling.html">Calling a function in proxy DLL C’</a><a class="proxy-dll__btn btn" href="other-options.html">Other use cases</a>
+                </div>
+              </div>
+              <div class="proxy-dll__image-block"><img class="proxy-img--width" src="../../assets/images/proxy-dll.png" alt="proxy dll image">
+              </div>
+              <div class="proxy-dll__row">
+                <div class="code">
+                  <pre><code class="code-block" tabindex="0">&lt;DllMetadata Version=<strong>"1.2"</strong>&gt;
+  &lt;PublicTypes&gt;
+    &lt;PublicType Name=<strong>"EmployeeDbAccessor" </strong>IsStatic=<strong>"True"</strong>&gt;
+      &lt;PublicProperties&gt;
+        &lt;PublicProperty&gt;
+        &lt;/PublicProperty&gt;
+      &lt;/PublicProperties&gt;
+      &lt;PublicFunctions&gt;
+        &lt;PublicFunction Name=<strong>"GetEmployeeBirthday" </strong>IsStatic=<strong>"True"</strong>&gt;
+          &lt;ReturnType&gt;<strong>DateTime</strong>&lt;/ReturnType&gt;
+          &lt;PublicParams&gt;
+            &lt;Param Name=<strong>"EmployeeId" </strong>Type=<strong>"int"</strong>/&gt;
+          &lt;/PublicParams&gt;
+        &lt;/PublicFunction&gt;
+      &lt;/PublicFunctions&gt;
+    &lt;/PublicType&gt;
+  &lt;/PublicTypes&gt;
+&lt;/DLLMetadata&gt;</code></pre>
+                </div>
+                <div class="proxy-dll__content proxy-dll__content--color">
+                  <h3 class="proxy-dll__title proxy-dll__title--fz">Public metadata of a DLL
+                  </h3>
+                  <p class="proxy-dll__text">The metadata of a DLL includes all public types (i.e. classes) in the DLL. For each public type, it contains the name and type of all of its public properties and the name, input parameters and return type of all of its public functions.
+                  </p>
+                  <p class="proxy-dll__text">The metadata also contains other public information about a DLL such as its version.
+                  </p>
+                  <p class="proxy-dll__text">The extracted metadata is a XML which looks like this.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="innovation">
+            <div class="innovation__container">
+              <h4 class="innovation__title">The new tide in software development
+              </h4>
+              <p class="innovation__text">This article offered a comprehensive discussion on the inevitable tide of using more freelancers via platforms such as Upwork in software development. Based on the author’s success stories, this article covered the opportunities, challenges, and a working model of using freelancers in software development.
+              </p>
+              <div class="innovation__row">
+                <div class="innovation__item"><a href="what-story.html">
+                    <div class="innovation__img"><img src="../../assets/images/scroll.svg" alt="scroll image">
+                    </div>
+                    <p class="innovation__text-link">What a story! →
+                    </p></a>
+                </div>
+                <div class="innovation__item"><a href="advantages.html">
+                    <div class="innovation__img"><img src="../../assets/images/worker.svg" alt="worker image">
+                    </div>
+                    <p class="innovation__text-link">Advantages in using freelancer programmers →
+                    </p></a>
+                </div>
+                <div class="innovation__item"><a href="the-challenges.html">
+                    <div class="innovation__img"><img src="../../assets/images/peak.svg" alt="peak image">
+                    </div>
+                    <p class="innovation__text-link">The challenges →
+                    </p></a>
+                </div>
+                <div class="innovation__item"><a href="working-model.html">
+                    <div class="innovation__img"><img src="../../assets/images/chip.svg" alt="chip image">
+                    </div>
+                    <p class="innovation__text-link">A working model →
+                    </p></a>
+                </div>
+                <div class="innovation__item"><a href="missed-opportunities.html">
+                    <div class="innovation__img"><img src="../../assets/images/target.svg" alt="target image">
+                    </div>
+                    <p class="innovation__text-link">The cost of missed opportunities →
+                    </p></a>
+                </div>
+                <div class="innovation__item"><a href="conclusion.html">
+                    <div class="innovation__img"><img src="../../assets/images/bulb.svg" alt="bulb image">
+                    </div>
+                    <p class="innovation__text-link">Conclusion →
+                    </p></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <footer class="footer">
+          <div class="footer__row container">
+            <div class="footer__logo-block"><a href="#"><img class="footer__logo" src="../../assets/images/logo-footer.png" alt="footer-logo"/></a>
+            </div>
+            <div class="footer__nav-content">
+              <div class="footer__nav-block">
+                <div class="footer__title">ABOUT US
+                </div>
+                <nav class="footer__list">
+                  <ul>
+                    <li class="footer__item"><a class="footer__link" href="#">Home</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Get In Touch</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">FAQs</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Careers</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer__nav-block">
+                <div class="footer__title">PRODUCT
+                </div>
+                <nav class="footer__list">
+                  <ul>
+                    <li class="footer__item"><a class="footer__link" href="#">Testimonials</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">How It Works</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Instant Remoting</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">ProxyDLL</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer__nav-block">
+                <div class="footer__title">RESOURCES
+                </div>
+                <nav class="footer__list">
+                  <ul>
+                    <li class="footer__item"><a class="footer__link" href="#">Using Skybridge</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Docs</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Support</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="footer__update-block">
+              <div class="footer__update-title">WANT TO STAY UPDATED?
+              </div>
+              <p class="footer__update-text">Subscribe to our newsletter. No spams. Just awesome infos!
+              </p>
+              <div class="footer__submitting-row">
+                <div class="footer__input-text">
+                  <input class="footer__input input" type="text"/>
+                </div>
+                <div class="footer__btn-link"><a class="footer__btn btn" href="#">Subscribe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="privacy-block"><span class="line line--px"></span>
+            <div class="privacy-block__text">Privacy Policy | Terms & Conditions
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="assets/scripts/build.js"></script>
+  </body>
+</html>

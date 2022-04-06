@@ -1,0 +1,65 @@
+
+.login-page
+   display flex
+   flex-grow 1
+   flex-shrink 1
+   flex-basis auto
+   padding-top 205px
+   padding-bottom 60px
+
+   .container
+      max-width 890px
+      margin 0 278px 0 auto
+
+   &__row
+      display flex
+      flex-direction column
+      justify-content center
+
+   &__form-content
+      max-width 597px
+
+      & + &
+         margin-right 0
+
+   label
+      margin-bottom 0
+
+.form--sm
+   margin-left 0
+
+.form-content--sm
+   flex-direction column
+   max-width 597px
+
+@media only screen and (max-width: lg-breakpoint)
+
+   .login-page
+      padding-top 50px
+      padding-bottom 50px
+
+@media only screen and (max-width: md-breakpoint)
+
+   .login-page
+
+      .container
+         margin 0 auto
+
+   .form-content--sm
+      margin 0 auto
+      width 100%
+
+@media only screen and (max-width: md-breakpoint)
+
+   .form-content--sm
+      max-width 100%
+
+@media only screen and (max-width: sm-breakpoint)
+
+   .login-page
+
+      &__title
+         font-size 30px
+
+      &__btn
+         width 100%

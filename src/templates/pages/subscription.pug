@@ -1,0 +1,58 @@
+extends ../layouts/main
+include ../blocks/footer/footer
+
+block content
+   div.wrapper
+      +b.HEADER.header--bg
+         +e.row.container
+               +e.logo
+                  a(href="index.html")
+                     img(src="../../assets/images/logo-header.svg", alt="logo")
+               +e.NAV.block-list
+                  +e.UL.list
+                     +e.LI.item
+                        a.header__link(href='price.html') PRICE
+                     +e.LI.item
+                        a.header__link--arrow(href='login-page.html') Frank
+
+      +b.ARTICLE.subscription
+         +e.row
+            +b.sidebar
+               +e.row
+                  +e.block--flex
+                     a(href="account-details.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/account.svg", alt="account image")
+                        +e.link Account details
+                     a(href="users-settings.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/users.svg", alt="users image")
+                        +e.link Users
+                     a(href="subscription.html").sidebar__item.active
+                        img.sidebar__image(src="../../assets/images/subscription.svg", alt="subscription image")
+                        +e.link Subscription
+                     a(href="account-settings.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/settings.svg", alt="settings image")
+                        +e.link Account settings
+                     a(href="password-security.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/password.svg", alt="password image")
+                        +e.link Password & security
+                  a(href="#").sidebar__item.sign-out
+                     img.sidebar__image(src="../../assets/images/sign-out.svg", alt="sign out image")
+                     +e.link Sign out
+
+            +b.content
+               +b.subscription-block
+                  +e.row
+                     +e.title Subscription
+                     +e.sub-title Current plan
+                     span.line.line--px
+                     +b.block-flex
+                        +e.title Free & Anonymous
+                        a(href="#").block-flex__btn.btn Upgrade
+                     +e.sub-title Subscription Renews on
+                     span.line.line--px
+                     +b.block-text
+                        +e.title Feb 24, 2021
+                        +e.text Cancellation of your subscription must be done at least 24 hours prior to your renewal date to avoid being charged for the upcoming cycle.
+
+
+      +footer()

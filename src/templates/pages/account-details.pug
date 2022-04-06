@@ -1,0 +1,123 @@
+extends ../layouts/main
+include ../blocks/footer/footer
+
+block content
+   div.wrapper
+      +b.HEADER.header--bg
+         +e.row.container
+               +e.logo
+                  a(href="index.html")
+                     img(src="../../assets/images/logo-header.svg", alt="logo")
+               +e.NAV.block-list
+                  +e.UL.list
+                     +e.LI.item
+                        a.header__link(href='price.html') PRICE
+                     +e.LI.item
+                        a.header__link--arrow(href='login-page.html') Frank
+
+      +b.ARTICLE.account-details
+         +e.row
+            +b.sidebar
+               +e.row
+                  +e.block--flex
+                     a(href="account-details.html").sidebar__item.active
+                        img.sidebar__image(src="../../assets/images/account.svg", alt="account image")
+                        +e.link Account details
+                     a(href="users-settings.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/users.svg", alt="users image")
+                        +e.link Users
+                     a(href="subscription.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/subscription.svg", alt="subscription image")
+                        +e.link Subscription
+                     a(href="account-settings.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/settings.svg", alt="settings image")
+                        +e.link Account settings
+                     a(href="password-security.html").sidebar__item
+                        img.sidebar__image(src="../../assets/images/password.svg", alt="password image")
+                        +e.link Password & security
+                  a(href="#").sidebar__item.sign-out
+                     img.sidebar__image(src="../../assets/images/sign-out.svg", alt="sign out image")
+                     +e.link Sign out
+
+            +b.content
+               +b.form-wrap
+                  +b.form-block--color
+                     +b.title-block
+                        +e.H1.title Account details
+                        +e.P.text Personal Information
+                        span.line.line--px
+                     form.form(action="#", method="POST")
+                        fieldset
+                           +b.form-content
+                                 +b.input-block
+                                    label.input-block__info-text(for="firstName") First Name
+                                    input.input-block__input.input(id="firstName" type="text")
+                                 +b.input-block
+                                    label.input-block__info-text(for="lastName") Last Name
+                                    input.input-block__input.input(id="lastName" type="text")
+                                 +b.input-block
+                                    .input-block__info-text Gender
+                                    +e.row
+                                       input.radio(id="gender1" type="radio" value="Male" name="gender" checked)
+                                       label.radio-text.info-text(for="gender1")
+                                          span.radio-style Male
+                                       input.radio(id="gender2" type="radio" value="Female" name="gender")
+                                       label.radio-text.info-text(for="gender2")
+                                          span.radio-style Female
+                                 +b.input-block
+                                    .input-block__info-text Date of birth
+                                    .select__row
+                                       .select__arrow
+                                          select.select#list
+                                             option(value="option 1") option 1
+                                             option(value="option 2") option 2
+                                             option(value="option 3") option 3
+                                             option(value="option 4") option 4
+                                       .select__arrow
+                                          select.select#list
+                                             option(value="option 1") option 1
+                                             option(value="option 2") option 2
+                                             option(value="option 3") option 3
+                                             option(value="option 4") option 4
+                                       .select__arrow
+                                          select.select#list
+                                             option(value="option 1") option 1
+                                             option(value="option 2") option 2
+                                             option(value="option 3") option 3
+                                             option(value="option 4") option 4
+                                 +b.input-block
+                                    label.input-block__info-text(for="businessName") Business name
+                                    input.input-block__input.input(id="businessName" type="text")
+                                 +b.input-block
+                                    label.input-block__info-text(for="address") Address
+                                    input.input-block__input.input(id="address" type="text")
+                                 +b.input-block
+                                    label.input-block__info-text(for="city") City
+                                    input.input-block__input.input(id="city" type="text")
+                                 +b.input-block
+                                    label.input-block__info-text(for="state") State
+                                    input.input-block__input.input(id="state" type="text")
+                                 +b.input-block
+                                    label.input-block__info-text(for="zipCode") Zip code
+                                    input.input-block__input.input(id="zipCode" type="text")
+                                 +b.input-block
+                                    label.input-block__info-text(for="country") Country
+                                    input.input-block__input.input(id="country" type="text")
+
+                     +b.email-block
+                        +b.title-block
+                           +e.H2.title Email
+                           span.line.line--px
+                        form.form(action="#", method="POST")
+                           fieldset
+                              +b.form-content
+                                 +b.input-block
+                                    label.input-block__info-text(for="email") Email address
+                                    input.input-block__input.input(id="email" type="email")
+                                 +b.input-block
+                                    label.input-block__info-text(for="userPassword") Password
+                                    input.input-block__input.input(id="userPassword" type="password")
+                                 +b.btn-block
+                                    button.btn-block__btn.btn-block__btn--fz.btn Save
+
+      +footer()

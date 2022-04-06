@@ -1,0 +1,44 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper--white
+      +header()
+
+      +b.ARTICLE.text-page
+         +b.bread-crumbs
+            +e.row
+               a(href="index.html").bread-crumbs__link Home >
+               a(href="proxy-dll.html").bread-crumbs__link SkyBridge® ProxyDLL >
+               SPAN.bread-crumbs__text More Details
+         +e.container.container
+            +b.process-block
+               +e.row
+                  +e.tabs
+                     +b.block-link
+                        a.block-link__text(href="process.html") The end-to-end process of generating the proxy DLLs
+                     +b.block-link
+                        a.block-link__text(href="calling.html") The end-to-end process of calling a function in proxy DLL C’ when the freelancer runs the project
+                     +b.block-link
+                        a.block-link__text.block-link__text--active(href="#") Other use cases
+                  +e.content--width
+                     +e.H1.title Other SkyBridge® ProxyDLL use cases
+                     +e.text-block
+                        +e.H2.sub-title Handing out a proxy DLL for different purposes
+                        +e.text The purpose to hand out a proxy DLL to someone else may not be for IP protection – it may be because
+                        +b.UL.item-row--pl
+                           +e.LI.item The original DLL demands a huge computation power which this recipient’s computer does not have. The computer that has the proxy DLL may even be a handheld device that has very limited CPU and memory.
+                        +b.UL.item-row--pl
+                           +e.LI.item The original DLL needs to query a corporate database, which cannot be given to the recipient, or the recipient does not have the licence to install a database.
+                     +e.text-block
+                        +e.H2.sub-title Remotely invoking a DLL
+                        +e.P.text If two computers are separated by firewalls, one has a DLL which the other computer wants to invoke, then they can use SkyBridge® ProxyDLL to easily achieve it.
+                        +e.P.text Unicon is a scientific instrument manufacturer. The instrument they make has its own software and runs on embedded Windows. When the instruments are out in the field, Unicon techsupport engineers need to remotely access the instruments to perform various techsupport operations that the end users cannot do, such as calibration, maintenance, diagnosis and log file retrieval. There is a “TechSupport.dll” on the instruments that does the above jobs.
+                        +e.P.text he PCs of the techsupport engineers has a techsupport app. This app needs to remotely invoke the “TechSupport.dll” on the instruments.
+                        +e.P.text--pl To do this,
+                        +e.P.text 1. A proxy DLL is generated from <strong> “TechSupport.dll” </strong> and placed in the techsupport PCs.
+                        +e.P.text 2. Both the instruments and the techsupport PCs have the SkyBridge® instant remoting client installed.
+                        +e.P.text 3. When a techsupport engineer needs to remotely operate an instrument in the field, he runs techsupport app, which invokes the proxy DLL, which forwards the invocations to <strong> “TechSupport.dll” </strong> in an instrument in the field.
+
+      +footer()

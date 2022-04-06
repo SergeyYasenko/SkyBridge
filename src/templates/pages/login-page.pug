@@ -1,0 +1,42 @@
+extends ../layouts/main
+include ../blocks/header/header
+
+block content
+   div.wrapper.wrapper--bg
+      +b.HEADER.header
+         +e.row.container
+               +e.logo
+                  a(href="index.html")
+                     img(src="../../assets/images/logo-header.svg", alt="logo")
+               +e.NAV.block-list
+                  +e.UL.list
+                     +e.LI.item
+                        a.header__link(href='price.html') PRICE
+                     +e.LI.item
+                        a.header__link(href='login-page.html') LOG IN
+                     a.header__btn-link(href='sign-up.html') SIGN UP
+      +b.ARTICLE.login-page
+         +e.row.container
+            +b.title-block
+               +e.H1.title USER LOGIN
+               span.line
+               +e.P.text Welcome back! Please login to your account.
+            form.form.form--sm(action="#", method="POST")
+               fieldset
+                  +b.form-content--sm
+                     .input-row
+                        +b.input-block--sm
+                           label.input-block__info-text(for="userName") Username
+                           input.input-block__input(id="userName" type="text")
+                        +b.input-block--sm
+                           label.input-block__info-text(for="userPassword") Password
+                           input.input-block__input(id="userPassword" type="password")
+                     +b.additional
+                        +e.remember-me
+                           input.additional__checkbox(type="checkbox" id="style")
+                           label.additional__style(for="style") Remember me
+                        a.additional__forgot-password(href='#') Forgot password?
+                     +b.btn-block
+                        a.btn-block__btn--margin.btn(href='#') Sign Up
+                        input.btn-block__btn--margin.btn(type="submit" value="Login")
+

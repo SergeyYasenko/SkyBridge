@@ -1,0 +1,24 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+block content
+   div.wrapper
+      +header()
+
+      +b.MAIN.page--main
+         +e.ARTICLE.row.container
+            +e.column
+               +e.img-block
+                  img.page__column-img(src="../../assets/images/remote-connection.png", alt="remote connecttion image")
+               +e.H1.title SkyBridge® <br> Instant Remoting
+               +e.P.sub-title One to three lines of introduction to keep viewers interested. <br> No information overload on homepage.
+               a.page__column-btn(href='instant-remoting.html') Learn More
+            +e.column
+               +e.img-block
+                  img.page__column-img(src="../../assets/images/proxy-server.png", alt="proxy server image")
+               +e.H2.title SkyBridge® <br> ProxyDLL
+               +e.P.sub-title One to three lines of introduction to keep viewers interested. <br> No information overload on homepage.
+               a.page__column-btn(href='proxy-dll.html') Learn More
+
+      +footer()
